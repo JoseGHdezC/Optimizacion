@@ -1,0 +1,46 @@
+Número de nodos(n)  Número de arcos(m)  Es dirigido/no dirigio
+i                     j                c
+
+
+Codificamos como vector
+[]            []
+Acceder nodo  arco
+
+struct:
+j nodo 
+c coste
+
+-> Nodos 0, n-1
+
+LS -> Lista de sucesores
+
+Ir al nodo i --> LS [i - 1][0]
+                (Vector) (posición)
+Nodo ->  LS[0][0].j //Nodo
+Coste -> LS[0][0].c //Coste
+
+Clase Grafo
+ build(nombre del fichero de texto, variable -> error (¿Hay error?)) {
+   Lee y mete n (nodo)
+   m (arco)
+   dirigido (1 dirigido, 0 no dirigido)
+   LS
+   LP
+
+   LS.resize(n) --> Crea el vector
+   for
+   leer línea a línea inicializar elementolista (j-1, c)
+   y hacer emplaceback  LS[i-1].emplace_back(elementolista) dummy.j y dummy.c
+   dummy.j = j-1;
+   Usar otro dummy para LP
+  Grafo no dirigido
+   LS[i-1].emplace_back(dummy)
+   LS[j-1].emplace_back(dummy)
+ }
+ destroy() {
+   .clear()
+ }
+
+ Recorridos
+  De amplitud
+  De profundidad
